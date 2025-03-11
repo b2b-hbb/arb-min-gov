@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>arbGovernor reZero</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>arbGovernor reZero</h1>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="content" style="border-bottom: #e8491d 3px solid;">
+            <div id="content-div">
+            </br>
+            <button id="refresh-button">Refresh</button>
+            </br>
+            <p>Current active votes</p>
+            <ul id="active-prop-list"></ul>
+            </br>
+            <p>Current inactive votes</p>
+            <ul id="inactive-prop-list"></ul>
+            </br>
+        </div>
+
+        <template id="proposal-template">
+            <li>
+              <div class="proposal">
+                <p class="proposal-info"></p>
+                <button class="toggle-details">Toggle Details</button>
+                <!-- Container for details (hidden by default) -->
+                <pre class="details" style="display: none;"></pre>
+                
+                <!-- Vote options (only for active proposals) -->
+                <div class="vote-options" style="display: none;">
+                  <input type="radio" name="voteOption" class="vote-yes" value="yes" id="vote-yes-">
+                  <label for="vote-yes-">Yes</label>
+                  <input type="radio" name="voteOption" class="vote-no" value="no" id="vote-no-">
+                  <label for="vote-no-">No</label>
+                  <input type="radio" name="voteOption" class="vote-abstain" value="abstain" id="vote-abstain-">
+                  <label for="vote-abstain-">Abstain</label>
+                  <button class="vote">Vote</button>
+                </div>
+              </div>
+            </li>
+        </template>
+
+        </section>
+
+        <section id="content">
+            <p>sup</p>
+        </section>
+
+        <br />
+        <section id="content2">
+
+            <label for="rpc-input">Enter an https:// URL of your RPC provider:</label>
+            <input value="https://arb1.arbitrum.io/rpc" name="rpc-url" id="rpc-input" type="url" required list="defaultURLs" />
+            <datalist id="defaultURLs">
+                <option value="https://arb1.arbitrum.io/rpc" label="Arb1 Public RPC"></option>
+                <option value="https://nova.arbitrum.io/rpc" label="Nova Public RPC"></option>
+              </datalist>
+            <br />
+            <button id="rpc-button">Use RPC Url</button>
+
+        </section>
+
+        <section id="content3">
+
+        </section>
+    </main>
+
+    <script type="module" src="./index.js"></script>
+
+
+    <footer>
+        <p>there ya go</p>
+    </footer>
+</body>
+</html>
