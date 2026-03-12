@@ -1,5 +1,11 @@
 ## arb minimalist governance ui
 
+
+there is a updated version feature complete
+with governance and security council elections support
+its just not pushed here (yet? :] )
+
+
 ### wat dis
 
 UI to interact with governance on arbitrum
